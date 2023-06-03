@@ -80,6 +80,9 @@ body{
       .sec-two{
       height:100%;
       width:clamp(900px, 60%, 60%);
+      font-family: crime-font, 'Courier New', Courier, monospace;
+    display:flex;
+    flex-direction:column;
       }
       @media screen and (width<1150px){
       .sec-two{
@@ -101,6 +104,8 @@ body{
           font-size:4rem;
           text-align:center;
           top:25%;
+          max-height:90px;
+          white-space:nowrap;
          }
       .sec-one>div p:only-child::before{
       background:url(images-icons-fonts/fraud.png) no-repeat;
@@ -112,6 +117,36 @@ body{
       background-size:90% 100%;
       top:10px;
      }
+     .sec-two>p{
+    text-align:center;
+    font-size:clamp(1.2rem, 3vw, 2rem);
+    line-height:clamp(1.5rem, 3vw, 3rem);
+    
+  }
+  .sec-two>button{
+    height:50px;
+    width:250px;
+    rotate:20deg;
+    margin-top:30px;
+    margin-left:30px;
+    font-family: crime-font, 'Courier New', Courier, monospace;
+    font-size:1rem;
+    background-color: white;
+    border:solid, black, 2px;
+    
+    }
+    .sec-two>h6{
+    font-size:1.4rem;
+    margin-top:35px;
+    margin-left:30px;
+    }
+
+.form-container{
+    height:40vh;
+    width:100vw;
+    background-color:black;
+  color:white;
+  }
     
         
     
