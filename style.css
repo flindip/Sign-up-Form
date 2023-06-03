@@ -1,0 +1,123 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	/*border: 0;*/
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;}
+    article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*CSS reset with font-family stack*/
+*{
+  border:solid red 3px;
+}
+/*Probably a good idea to put a max-width for mobile*/
+html,
+body{
+    height:100%;
+  }
+  
+body{
+   display:flex;
+   }
+@media screen and (width<1150px){
+  body{ 
+    flex-direction:column;}
+    }
+
+@font-face{ 
+     font-family: crime-font;
+     src: url(images-icons-fonts/SpecialElite-Regular.ttf);}
+
+     .sec-one{
+       background: url(images-icons-fonts/money-bribe.jpg);
+       background-size: cover;
+       background-repeat:no-repeat;
+       display:flex;
+       flex-direction:column;
+       height:100%;
+       width:clamp(600px, 40%, 40%);
+       font-size:4rem;
+       }
+       @media screen and (width<1150px){
+        .sec-one{
+          height:40%;
+          width:100%;
+          }}
+      .sec-two{
+      height:100%;
+      width:clamp(900px, 60%, 60%);
+      }
+      @media screen and (width<1150px){
+      .sec-two{
+        height:60%;
+        width:100%;
+      }}
+       .sec-one>div{
+        position:relative;
+        width:100%;
+        height:150px;
+        top:15%;
+        font-family: crime-font, 'Courier New', Courier, monospace;
+        background:rgba(0, 0, 0, 0.306);
+        color:white;
+        text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+        }
+        .sec-one>div p:only-child{
+          position:relative;
+          font-size:4rem;
+          text-align:center;
+          top:25%;
+         }
+      .sec-one>div p:only-child::before{
+      background:url(images-icons-fonts/fraud.png) no-repeat;
+      display:inline-block;
+      position:relative;
+      content:"";
+      width:70px;
+      height:65px;
+      background-size:90% 100%;
+      top:10px;
+     }
+    
+        
+    
+      
+     
+     
+
+
+ 
