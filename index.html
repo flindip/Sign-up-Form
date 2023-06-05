@@ -16,26 +16,57 @@
     <p>Hey You!  Yes You!  Wanna get rich?  Want some free stuff?  Need answers to any question you can think of?  Give us all your very personal and confidential information!  
           Don't worry, nothing bad will happen.  We promise!  Act FAST!  Supplies are limited, for a limited time!</p>
     <div class="form-container">
-        <form action="">
+        <form action='#' id="form1">
         <fieldset>
             <legend>Your personal information is safe with us<span>*snicker*</span></legend>
              <ul>
-                <li><label for="f_name">First Name:</label>
-                    <input type="text" id="f_name" name="f_name">
+                <li>
+                    <label for="first-name">First Name:</label><br>
+                    <input type="text" id="first-name" name="first-name" required >
                 </li>
-                 <li><label for="l_name">Last Name:</label><input type="text" id='l_name' name="l_name">
+                 <li>
+                    <label for="l_name">Last Name:</label><br>
+                    <input type="text" id='l_name' name="l_name" required>
+                 </li>
+                <li>
+                    <label for="mail">Email:</label><br>
+                    <input type="email" id="mail" name="mail" required>
                 </li>
-                <li><label for="mail">Email:</label><input type="email" id="mail" name="mail"></li>
-                <li><label for="tel_phone">Telephone:</label><input type="tel" id="tel_phone" name="telephone"></li>
-                <li><label for="pwd">Password:</label><input type="password" id="pwd" name="password"></li>
-                <li><label for="c_password">Confirm Password:</label><input type="password" id="c_pwd" name="c_pwd"></li>
-             </ul>
+                  <li>
+                    <label for="tel_phone">Telephone:</label><br>
+                    <input type="" id="tel_phone" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="451-341-0541"required>
+                </li>
+                <li> 
+                    <label for="pwd">Password:</label><br>
+                    <input type="password" id="pwd" name="password" minlength="6" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                    placeholder='6 char-case-upper/lower-num/SpecChar' required>
+                </li>
+                <li>
+                    <label for="c_pwd">Confirm Password:</label><br>
+                    <input type="password" id="c_pwd" name="c_pwd" required>
+                </li>
+            </ul>
            </fieldset>
            </form>
-     
-    </div>
-    <button>Create this legit account</button>
-    <h6>Already gullib..a user?<a href="">Log in</a></h6>
+     </div>
+     <button type="submit" form="form1">Create this legit account</button>
+    <h6>Already gullib..a user?<a href="#" style="color:black">Log in</a></h6>
 </div>
 </body>
+<script>
+   
+    const submit=document.getElementsByTagName('button')[0];
+    submit.addEventListener('click', (e)=>checkPassword());
+    
+    function checkPassword (){
+    let password=document.getElementById('pwd').value;
+    let password2=document.getElementById('c_pwd').value;
+          if(password2===password){
+             return true;
+        }
+        else{
+            return alert('Password does not match')}
+        };
+
+</script>
 </html>
